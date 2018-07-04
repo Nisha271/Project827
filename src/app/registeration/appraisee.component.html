@@ -1,0 +1,262 @@
+<div class="container">
+  <div class=" row">
+  </div>
+  <div class=" row">
+    <div class="col col-lg-4">
+    </div> 
+  </div>
+</div>
+
+ <ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" id='a1' href="#ADD">ADD</a></li>
+  <li><a data-toggle="tab" id='v1' href="#VIEW">VIEW</a></li>
+  </ul>
+<div class="tab-content">
+  <div id="ADD" class="tab-pane fade in active">
+<div class="container-fluid">
+<p>
+<strong>  Personal Data</strong>
+</p>
+<table class="table table-bordered">
+<form class="form-group"></form>  
+<div class="form-group">
+<label class="control-label col-sm-1" for="FirstName">FirstName:<sup><style>sup{color: red;}</style>*</sup></label>
+<div class="col-sm-5">
+<input type="text" class="form-control" (keyup)="validateform()" [(ngModel)]="Register.FirstName" [disabled]="abc" placeholder="Name">
+</div>
+</div>
+<div class="form-group">
+<label class="control-label col-sm-1" for="LastName">LastName:<sup><style>sup{color: red;}</style>*</sup></label>
+<div class="col-sm-5">
+<input type="text" class="form-control" (keyup)="validateform()" [(ngModel)]="Register.LastName" [disabled]="abc"placeholder="Last Name">
+</div>
+</div>
+<div class="form-group">
+  <label class="control-label col-sm-1" for="EmailId">EmailId:<sup><style>sup{color: red;}</style>*</sup></label>
+  <div class="col-sm-5">
+  <input type="text" class="form-control" (keyup)="validateform()" [(ngModel)]="Register.EmailId" [disabled]="abc" placeholder="someone@example.com">
+</div>
+</div>
+<div class="form-group">
+    <label class="control-label col-sm-1" for="DOB">D.O.B.:<sup><style>sup{color: red;}</style>*</sup></label>
+    <div class="col-sm-5">
+    <input type="date" class="form-control" (keyup)="validateform()" [disabled]="abc" [(ngModel)]="Register.DOB">
+  </div>
+  </div>
+  <label class="control-label col-sm-1"  for="Gender" >Gender:</label>
+  <div class="col-sm-5">
+  <label class="radio-inline"><input type="radio" name="Gender"  value="Male" [disabled]="abc" [(ngModel)]="Register.Gender" >Male</label>
+  <label class="radio-inline" ><input type="radio" name="Gender" value="Female" [disabled]="abc" [(ngModel)]="Register.Gender">Female</label>
+</div>
+<div class="form-group">
+    <label class="control-label col-sm-1" for="Qualification">Qualification:</label>
+    <div class="col-sm-5">
+        <select class="form-control" id="Qualification" [disabled]="abc" [(ngModel)]="Register.Qualification" (change)="modalpop(d1.Qualification)">
+            <option> </option>
+            <option value="1">SSC</option>
+            <option value="2">HSC </option>
+            <option value="3">UG</option>
+            <option value="4">PG</option>  
+          </select>
+    </div>
+</div> 
+<div class="form-group">
+  <label class="control-label col-sm-1" for="MaritalStatus">MaritalStatus:</label>
+  <div class="col-sm-5">      
+      <select class="form-control" id="MaritalStatus" [disabled]="abc" [(ngModel)]="Register.MaritalStatus">
+          <option> Please make a choice</option>              
+          <option >Single</option>
+          <option>Married</option>
+          <option>Registered Partnership</option>
+          <option>Widow</option>      
+        </select>
+  </div>
+</div>
+<div class="form-group">
+  <label class="control-label col-sm-1" for="Nationality">Nationality:</label>
+  <div class="col-sm-5">      
+      <select class="form-control" id="Nationality" [disabled]="abc" [(ngModel)]="Register.Nationality">
+          <option> Please make a choice</option>              
+          <option >Afganistan</option>
+          <option>Belgium</option>
+          <option>Canada</option>
+          <option>Denmark</option>      
+        </select>
+  </div>
+</div>
+<div class="form-group">
+  <label class="control-label col-sm-1" for="Identification">Identification:</label>
+  <div class="col-sm-5">      
+      <select class="form-control" id="Identification" [disabled]="abc" [(ngModel)]="Register.Identification">
+          <option> Please make a choice</option>              
+          <option >Driver's License</option>
+          <option>Passport</option>
+          <option>Adhhar Card</option>     
+        </select>
+  </div>
+</div>
+</table>
+
+
+<p>
+<strong>   Your Address </strong>
+</p>
+  <table class="table table-bordered">
+      <form class="form-group"></form>  
+      <div class="form-group">
+          <label class="control-label col-sm-1" for="Street name">Street name:</label>
+              <div class="col-sm-5">
+                  <input type="string" class="form-control" [disabled]="abc" [(ngModel)]="Register.Streetname">
+              </div>
+      </div>
+      <div class="form-group">
+          <label class="control-label col-sm-1" for="House number">Housenumber:</label>
+              <div class="col-sm-3">
+                  <input type="number" class="form-control" [disabled]="abc" [(ngModel)]="Register.Housenumber">
+              </div>
+      </div>
+       <div class="form-group">
+          <label class="control-label col-sm-1" for="Extenstion">Extenstion:</label>
+              <div class="col-sm-2">
+                  <input type="number" class="form-control" [disabled]="abc" [(ngModel)]="Register.Extenstion">
+              </div>
+      </div>
+      <div class="form-group">
+          <label class="control-label col-sm-1" for="City">City:</label>
+              <div class="col-sm-5">     
+                  <input type="text" class="form-control" [disabled]="abc" [(ngModel)]="Register.City">
+              </div>
+      </div>   
+      <div class="form-group">
+              <label class="control-label col-sm-1" for="State">State:</label>
+              <div class="col-sm-5">
+                <select class="form-control" id="State" [disabled]="abc" [(ngModel)]="Register.state">
+                  <option> </option>              
+                  <option >Andhra Pradesh</option>
+                  <option>Asam</option>
+                  <option>Bihar</option>
+                  <option>Gujrat</option>
+                  <option>Maharashtra</option>
+                  <option>Madhya Pradesh</option>        
+                </select>
+              </div>
+            </div>
+      <div class="form-group">
+          <label class="control-label col-sm-1" for="PinCode">PinCode:</label>
+              <div class="col-sm-5">      
+                  <input type="number" class="form-control" [disabled]="abc" [(ngModel)]="Register.PinCode">
+              </div>
+      </div>
+      <div class="form-group">
+              <label class="control-label col-sm-1" for="Country">Country:</label>
+                  <div class="col-sm-5">      
+                          <select class="form-control" id="Country" [disabled]="abc" [(ngModel)]="Register.Country">
+                                  <option> Please make a choice</option>              
+                                  <option >Afganistan</option>
+                                  <option>Belgium</option>
+                                  <option>Canada</option>
+                                  <option>Denmark</option>      
+                                </select>
+                  </div>
+      </div>    
+      <div class="form-group">
+              <label class="control-label col-sm-1" for="Telephone No.">Telephone No:</label>
+                  <div class="col-sm-5">
+                      <input type="number" class="form-control" [disabled]="abc" [(ngModel)]="Register.TelephoneNo">
+                  </div>
+      </div> 
+      <div class="form-group">
+          <label class="control-label col-sm-1" for="Mob No.">Mob No:</label>
+              <div class="col-sm-5">
+                  <input type="number" class="form-control" [disabled]="abc" [(ngModel)]="Register.MobileNo" placeholder="+91 1234567890">
+              </div>
+      </div>
+  </table>
+  
+  <p>
+     <strong> Position </strong>
+  </p>
+  <table class="table table-bordered">
+          <form class="form-group"></form>  
+          <div class="form-group">
+              <label class="control-label col-sm-1" for="Function">Function:<sup><style>sup{color: red;}</style>*</sup></label>
+                  <div class="col-sm-5">
+                      <input type="string" class="form-control" (keyup)="validateform()" [disabled]="abc" [(ngModel)]="Register.Function">
+                  </div>
+          </div>
+          <div class="form-group">
+                  <label class="control-label col-sm-1" for="Department">Department:<sup><style>sup{color: red;}</style>*</sup></label>
+                      <div class="col-sm-5">
+                              <select class="form-control" id="Department" (keyup)="validateform()" [disabled]="abc" [(ngModel)]="Register.Department">
+                                      <option> </option>              
+                                      <option>Marketing</option>
+                                      <option>Management</option>
+                                      <option>IT</option>
+                                      <option>Technical Services</option>      
+                              </select>
+                      </div>
+          </div>
+          <div class="form-group">
+                  <label class="control-label col-sm-1" for="Type Of Employement">Type Of Employement:</label>
+                      <div class="col-sm-5">
+                              <select class="form-control" id="Type Of Employement" [disabled]="abc" [(ngModel)]="Register.TypeOfEmployement">
+                                      <option></option>              
+                                      <option>Part-time Employee</option>
+                                      <option>Intern</option>
+                                      <option>Holiday Worker</option>
+                                      <option>Permanent Position</option>      
+                              </select>
+                      </div>
+          </div>
+          <label class="control-label col-sm-1" for="Employee term" >Empterm:</label>
+          <div class="col-sm-5">
+          <label class="radio"><input type="radio" name="Employeeterm"  value="Permanent" [disabled]="abc" [(ngModel)]="Register.Employeeterm" >Permanent</label>
+          <label class="radio" ><input type="radio" name="Employeeterm" value="Temporary" [disabled]="abc" [(ngModel)]="Register.Employeeterm">Temporary</label>
+        </div> 
+        <form class="form-group"></form>  
+        <div class="form-group">
+            <label class="control-label col-sm-1" for="D.O.J">D.O.J:</label>
+                <div class="col-sm-2">
+                    <input type="date" class="form-control" [disabled]="abc" [(ngModel)]="Register.DOJ">
+                </div>
+        </div>
+        <form class="form-group"></form>  
+        <div class="form-group">
+            <label class="control-label col-sm-1" for="D.O.T">D.O.T:</label>
+                <div class="col-sm-2">
+                    <input type="date" class="form-control" [disabled]="abc" [(ngModel)]="Register.DOT">
+                </div>
+        </div>   
+      </table>
+      <button type="button" class="btn btn-primary" [disabled]="validateform()" id='button1'(click)="SubmitInformation()">Submit</button>         
+</div>
+</div>
+<div id="VIEW" class="tab-pane fade"> 
+      <table class="table table-bordered" >
+              <thead>
+                <tr>
+                  <th>Firstname</th>
+                  <th>LastName</th>
+                  <th>EmailId</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let d of RegisterList">
+                  <td>{{d.FirstName}}</td>
+                  <td>{{d.LastName}}</td>
+                  <td>{{d.EmailId}}</td>
+                  <td><button type="button" class="btn btn-primary btn-sm">
+                       <span class="glyphicon glyphicon-eye-open" (click)="ViewInformation(d)"></span></button>
+                      <button type="button" class="btn btn-primary btn-sm">
+                          <span class="glyphicon glyphicon-edit" (click)="edit(d);"></span></button>
+                          <button type="button" class="btn btn-primary btn-sm">
+                                  <span class="glyphicon glyphicon-remove" (click)="remove();"></span></button></td>
+                </tr>
+              </tbody>
+            </table>         
+  </div>
+</div>
+
+
+

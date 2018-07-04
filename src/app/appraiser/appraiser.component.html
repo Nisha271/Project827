@@ -1,0 +1,111 @@
+<div class="container">
+  <div class=" row">
+  </div>
+  <div class=" row">
+    <div class="col col-lg-4">
+    </div> 
+  </div>
+</div>
+<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" id='a1' href="#ADD">ADD</a></li>
+    <li><a data-toggle="tab" id='v1' href="#VIEW">VIEW</a></li>
+    </ul>
+  <div class="tab-content">
+    <div id="ADD" class="tab-pane fade in active">
+      <div class="container-fluid">
+          
+              <form class="form-group"></form>
+              <div class="form-group">
+                  <label class="control-label col-sm-1" for="Project">Project:</label>
+                      <div class="col-sm-5">      
+                              <select class="form-control" id="Project" [disabled]="abc"  [(ngModel)]="Task.Project" >
+                                <option></option>
+                                      <option *ngFor="let p of project">{{p}}</option>     
+                                    </select>
+                      </div> 
+                      </div> 
+                      <div class="form-group">
+                          <label class="control-label col-sm-1" for="Module">Module:</label>
+                              <div class="col-sm-5">      
+                                      <select class="form-control" id="Module" [disabled]="abc" [(ngModel)]="Task.Module">
+                                          <option></option>      
+                                        <option *ngFor="let m of module">{{m}}</option>     
+                                            </select>
+                              </div>  
+                      </div>
+                      <div class="form-group">
+                          <label class="control-label col-sm-1" for="User">User:</label>
+                              <div class="col-sm-5">      
+                                      <select class="form-control" id="User" [disabled]="abc" [(ngModel)]="Task.User">
+                                          <option></option>      
+                                        <option *ngFor="let u of user">{{u}}</option>     
+                                            </select>
+                              </div>  
+                      </div>
+                      <div class="form-group">
+                          <label class="control-label col-sm-1" for="Priority">Priority:</label>
+                          <div class="col-sm-5">      
+                              <select class="form-control" id="Priority" [disabled]="abc" [(ngModel)]="Task.Priority">
+                                  <option></option>      
+                                <option *ngFor="let p1 of priority">{{p1}} </option>     
+                                    </select>
+                      </div>  
+                        </div>
+                      
+                      <div class="form-group">
+                          <label class="control-label col-sm-12" for="TaskDescription">Task Description:</label>
+                          <div class="col-sm-6">
+                            <textarea class="form-control" rows="5" id="TaskDescription"></textarea>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-1" for="StartDate">Start Date:</label>
+                            <div class="col-sm-5">
+                            <input type="date" class="form-control" [disabled]="abc" [(ngModel)]="Task.StartDate" >
+                            </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="control-label col-sm-1" for="EndDate">End Date:</label>
+                              <div class="col-sm-5">
+                              <input type="date" class="form-control" [disabled]="abc" [(ngModel)]="Task.EndDate">
+                              </div>
+                            </div>
+                            
+                              <div class="form-group">
+                                  <label class="control-label col-sm-1" for="Status">Status:</label>
+                                  <div class="col-sm-5">      
+                                      <select class="form-control" id="Status" [disabled]="abc" [(ngModel)]="Task.Status">
+                                          <option></option>      
+                                        <option *ngFor="let s of status">{{s}}</option>     
+                                            </select>
+                                  </div>  
+                              </div>
+        <button type="button" class="btn btn-primary" id='button1'(click)="SubmitInformation()">Submit</button>
+     </div>
+     </div>
+     <div id="VIEW" class="tab-pane fade"> 
+        <table class="table table-bordered" >
+                <thead>
+                  <tr>
+                    <th>Project</th>
+                    <th>User</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let d of TaskList">
+                    <td>{{d.Project}}</td>
+                    <td>{{d.User}}</td>
+                    <td>{{d.Status}}</td>
+                    <td><button type="button" class="btn btn-primary btn-sm">
+                         <span class="glyphicon glyphicon-eye-open" (click)="ViewInformation(d)"></span></button>
+                        <button type="button" class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-edit" (click)="edit(d);"></span></button>
+                            <button type="button" class="btn btn-primary btn-sm">
+                                    <span class="glyphicon glyphicon-remove" (click)="remove();"></span></button></td>
+                  </tr>
+                </tbody>
+              </table>         
+    </div>
+     </div>

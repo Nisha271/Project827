@@ -1,0 +1,29 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">SimpleWorks<sup>TM</sup></a>
+    </div>
+  </div>
+</nav>
+<div class="container">
+<div class="col-md-6 col-md-offset-3">
+<div class="panel-group">
+  <div class="panel panel-primary">
+      <div class="panel-heading">Login</div>
+      <div class="panel-body"><div class="col-md-12">
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="text" class="form-control"  [(ngModel)]="FormTo.Email"  placeholder="Enter email" name="email"><div  id="nr1"></div>
+            </div>
+            <div class="form-group">
+              <label for="pwd">Password:</label>
+              <input type="password" class="form-control"  [(ngModel)]="FormTo.Password" onblur="submit()" placeholder="Enter password" name="pwd"><div  id="nr1"></div>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="remember"> Remember me</label>
+            </div>
+            <button type="button" class="btn btn-primary" (click)='submit()'>Login</button>
+        </div></div>
+    </div>
+  </div>
+</div>
