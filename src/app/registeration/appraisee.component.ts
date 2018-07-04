@@ -48,7 +48,7 @@ export class AppraiseeComponent implements OnInit {
   validateform(a){
     if(this.Register.FirstName != 'null' && this.Register.LastName != 'null' && this.Register.DOB != null
       && this.Register.EmailId != 'null' && this.Register.Function != 'null' && this.Register.Department != 0){
-        document.getElementById("button1") = true;
+      
     }
   }
 }
