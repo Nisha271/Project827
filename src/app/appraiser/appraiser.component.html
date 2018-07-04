@@ -16,7 +16,7 @@
           
               <form class="form-group"></form>
               <div class="form-group">
-                  <label class="control-label col-sm-1" for="Project">Project:</label>
+                  <label class="control-label col-sm-1" for="Project">Task Title:</label>
                       <div class="col-sm-5">      
                               <select class="form-control" id="Project" [disabled]="abc"  [(ngModel)]="Task.Project" >
                                 <option></option>
@@ -34,7 +34,7 @@
                               </div>  
                       </div>
                       <div class="form-group">
-                          <label class="control-label col-sm-1" for="User">User:</label>
+                          <label class="control-label col-sm-1" for="User">Assignee:</label>
                               <div class="col-sm-5">      
                                       <select class="form-control" id="User" [disabled]="abc" [(ngModel)]="Task.User">
                                           <option></option>      
@@ -65,7 +65,7 @@
                             </div>
                           </div>
                           <div class="form-group">
-                              <label class="control-label col-sm-1" for="EndDate">End Date:</label>
+                              <label class="control-label col-sm-1" for="EndDate">Due Date:</label>
                               <div class="col-sm-5">
                               <input type="date" class="form-control" [disabled]="abc" [(ngModel)]="Task.EndDate">
                               </div>
