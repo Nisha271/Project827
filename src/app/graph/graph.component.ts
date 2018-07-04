@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Projects,modulelist} from '../graphTO';
+//import { deepClone } from 'deep-clone';
 
 declare var jQuery : any;
 @Component({
@@ -16,6 +17,8 @@ export class GraphComponent implements OnInit {
   ModuleList:modulelist [] = []; 
   pList:Projects [] = [] ;
   abc:boolean= false;
+  l:any [] =[];
+    
   ngOnInit() {
   }
 sub1()
@@ -51,12 +54,35 @@ this.projectId = id;
 }
 sub2()
 {
+  debugger
+  this.ModuleList = [];
   this.Module.projectId = this.projectId;
- let c = this.ModuleList.push(this.Module)
-  this.pList[this.projectId].Module = this.ModuleList;
-  this.Module= {};
+  let c = this.pList[this.projectId].Module;
+  if(c)
+  {
+    c.push(this.Module);
+  }
+  else
+  {
+      let c = this.pList[this.projectId];
+       this.ModuleList.push(this.Module);
+      c.Module = this.ModuleList
+      //jQuery.extend({},list);
 
- 
+  }
+  //c.Module = this.ModuleList;
+ // var  c = this.ModuleList.push(this.Module);
+
+  //var x = this.l.push(Object.assign({}, this.ModuleList));
+ // var a= this.ModuleList;
+ // let  a= _.cloneDeep(this.ModuleList)
+// this.l = Object.assign([], this.ModuleList);
+
+  //this.pList[this.projectId].Module = this.l;
+  //this.l =[];
+ // this.ModuleList =[];
+  this.Module= {};
+  
   //this.p={};
   //jQuery("#v1").tab("show");
   
