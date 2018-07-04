@@ -42,16 +42,17 @@ export class AppraiseeComponent implements OnInit {
     jQuery("#button1").html('Update');
   }
   remove()
-  
+
   {
     this.RegisterList = null;
   }
-  validateform(a){
-    if(this.Register.FirstName != 'null' && this.Register.LastName != 'null' && this.Register.DOB != null
-      && this.Register.EmailId != 'null' && this.Register.Function != 'null' && this.Register.Department != 0){
+  validateform(){
+    if(this.Register.FirstName != 'null' && this.Register.LastName != 'null' && this.Register.DOB != null && this.Register.EmailId != 'null')
+    {
       return false;
     }
-    else{
+    else
+    {
       return true;
     }
   }
