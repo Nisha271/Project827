@@ -22,4 +22,8 @@
    Employeeterm?:string
    DOJ?:Date
    DOT?:Date 
+   Id?:id[]=[];
+}
+export class id{
+  updateId?:number;
 }
