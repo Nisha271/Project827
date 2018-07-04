@@ -12,6 +12,7 @@ import { routes } from './app.route';
 import { AppraiseeComponent } from './registeration/appraisee.component';
 import { AppraiserComponent } from './appraiser/appraiser.component';
 import { HomeComponent } from './home/home.component';
+import { GraphComponent} from './graph/graph.component';
 
 
 @NgModule({
@@ -21,8 +22,8 @@ import { HomeComponent } from './home/home.component';
     LoginComponent,
     AppraiseeComponent,
     AppraiserComponent,
-    HomeComponent
-    
+    HomeComponent,
+    GraphComponent
   ],
   imports: [
     BrowserModule,

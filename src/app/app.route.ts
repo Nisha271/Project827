@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppraiseeComponent } from './registeration/appraisee.component';
 import { AppraiserComponent } from './appraiser/appraiser.component';
+import { GraphComponent} from './graph/graph.component';
 
 
 export const routes: Routes = [
@@ -13,6 +14,8 @@ export const routes: Routes = [
     { path: 'login' , component: LoginComponent },
     { path: 'dashboard' , component: DashboardComponent },
     { path: 'appraisee' , component: AppraiseeComponent },
-    { path: 'appraiser' , component: AppraiserComponent }
+    { path: 'appraiser' , component: AppraiserComponent },
+    { path: 'graph' , component: GraphComponent }
+
 ];
 
