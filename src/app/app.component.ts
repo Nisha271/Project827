@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent{
   //Hello
+   a = 0;
 }
 
 
