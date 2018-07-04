@@ -1,0 +1,121 @@
+  <div class="container">
+            <div class=" row">
+            </div>
+            <div class=" row">
+              <div class="col col-lg-4"> 
+              </div> 
+            </div>
+          </div>
+  <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" id="a1" href="#add">add</a></li>
+      <li><a data-toggle="tab" id="v1" href="#view">view</a></li>
+ 
+      </ul>
+    <div class="tab-content">
+    <div id="add" class="tab-pane fade in active">
+       
+      <div class="container-fluid" id="f1">
+          <table class="table table-bordered">
+           <form class="form-horizontal"></form>
+           <label class="control-label col-sm-12"></label>
+           <label class="control-label col-sm-12"></label>
+    <div class="form-group">
+    <label class="control-label col-sm-2" for="ProjectName">ProjectName:</label>
+    <div class="col-sm-4">
+    <input type="text" class="form-control" [(ngModel)]="p.ProjectName" [disabled]="abc" placeholder="Enter ProjectName">
+    </div>
+  </div>
+  <div class="form-group">
+      <label class="control-label col-sm-2" for="Status">Status:</label>
+      <div class="col-sm-4">
+      <input type="text" class="form-control" [(ngModel)]="p.Status" [disabled]="abc"  placeholder="Enter Status">
+      </div>
+    </div>
+    <label class="control-label col-sm-12"></label>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="Dateofstart">Dateofstart:</label>
+        <div class="col-sm-4">
+        <input type="date" class="form-control" [(ngModel)]="p.Dateofstart" [disabled]="abc" >
+        </div>
+      </div>
+      <div class="form-group">
+          <label class="control-label col-sm-2" for="Dateofend">Dateofend:</label>
+          <div class="col-sm-4">
+          <input type="date" class="form-control" [(ngModel)]="p.Dateofend" [disabled]="abc" >
+          </div>
+        </div>
+        <label class="control-label col-sm-12"></label>
+
+          <div class="form-group">
+              <label class="control-label col-sm-2" for="Description">Description:</label>
+              <div class="col-sm-5"> 
+                  <textarea  class="form-control" rows="3" id="Description" [(ngModel)]="p.Address" placeholder="project Description" [disabled]="abc" ></textarea>
+              </div>
+            </div>
+            <label class="control-label col-sm-12"></label>
+            <button id="b1" type="button" class="btn btn-primary" (click)="sub1()">Submit</button>
+        </table>
+        </div> 
+    </div>
+    <div id="view" class="tab-pane fade">
+      <table class="table table-bordered">
+          <thead>
+              <tr>
+                <th>ProjectName</th>
+                <th>Status</th>
+                <th>Dateofstart</th>
+                <th>Dateofend</th>
+                <th>Module</th>
+                <th>Action</th>
+               
+
+              </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let d of pList;let i = index" >
+                <td>{{d.ProjectName}}</td>
+                <td>{{d.Status}}</td>
+                <td>{{d.Dateofstart}}</td>
+                <td>{{d.Dateofend}}</td>
+                <td>{{d.Module | json}}</td> 
+                <td><button type="button"  class="btn btn-primary btn-sm"  (click)="view(d)">
+                    <span></span></button>  
+                  <button  type="button" (click)="attachModule(i)"  class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#am" >
+                  <span class="glyphicon glyphicon-plus"></span></button>
+                  <button type="button" class="btn btn-primary btn-sm">
+                      <span class="glyphicon glyphicon-pencil" (click)="edit(d)"></span></button>
+                      <button type="button" class="btn btn-primary btn-sm">
+                          <span class="glyphicon glyphicon-remove" (click)="remove()"></span></button>
+                </td> 
+                 
+              </tr>
+              </tbody>
+            </table>
+    </div>
+</div>
+         
+<div class="modal fade" id="am" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="Module">Module:</label>
+                <div class="col-sm-4">
+                <input type="text" class="form-control" [(ngModel)]="Module.ModuleName" >
+                </div>
+              </div>
+             
+        </div>
+        <div class="modal-footer">
+            <button id="b2" type="button" class="btn btn-default" (click)="sub2(d)">Submit</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+ 

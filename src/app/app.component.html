@@ -1,0 +1,387 @@
+
+
+<nav class="navbar navbar-inverse topMent">
+    <div class="container-fluid">
+        <a class="navbar-brand"></a>
+        <a class="navbar-brand" >SimpleWorks<sup>TM</sup></a>
+        <ul class="nav navbar-nav" routerLinkActive="active">
+            <li class="nav-item"><a class="nav-link" routerLink="home" >Home</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="appraisee" >Apparisee</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="appraiser" >Appariser</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="HRManagement">HRManagement</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="calculator">Calculator</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="graph">Graph</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+           
+          <li><a routerLink="login"><span class="glyphicon glyphicon-log-out"></span> LogOut</a></li>
+        </ul>
+        <!-- <ul class="nav navbar-nav navbar-right">
+            <li><a ><span class="glyphicon"></span> Change Password</a></li>
+  
+        </ul> -->
+        <!-- <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item"><a class="nav-link" routerLink="login" (click)='back()'>goback</a></li>
+            </ul> -->
+  
+    </div>
+  </nav>
+<router-outlet></router-outlet>
+
+
+
+
+<!--
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">SimpleWorks<sup>TM</sup></a>
+      </div>
+      </div>
+</nav>
+ 
+<div class="container">
+  <div class="col-md-6 col-md-offset-3">
+    
+    <div class="panel panel-primary">
+        <div class="control-label col-sm-2" class="panel-heading">Login</div>
+        
+        <div class="panel-body">
+              <div class="form-group">
+      <label  for="email">Email:</label>
+      <input type="email" class="form-control"  [(ngModel)]="Form.email" placeholder="Enter email" name="email">
+      </div>
+      <div class="form-group">
+      <label  for="pwd">Password:</label>
+      <input type="password" class="form-control"  [(ngModel)]="Form.password" placeholder="Enter password" name="pwd">
+      </div>
+      <div class="col-sm-10">
+      <button class="control-label col-sm-2" type="submit" class="btn btn-default">Submit</button>
+      </div>
+       </div>
+    </div>
+  </div>
+
+</div>
+-->
+<!--
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">SimpleWorks<sup>TM</sup></a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+       
+        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> LogOut</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon"></span> Change Password</a></li>
+
+      </ul>
+    </div>
+  </nav>
+      
+     
+<div class="container-fluid">
+  <ul class="nav nav-pills">
+    <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
+    <li><a data-toggle="pill" href="#apparisee">Apparisee</a></li>
+    <li><a data-toggle="pill" href="#appariser">Appariser</a></li>
+    <li><a data-toggle="pill" href="#hrmanagement">HR-Management</a></li>
+  </ul>
+  
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <h3>Home</h3>
+        
+      </div>
+    <div id="apparisee" class="tab-pane fade">
+      <h3>Apparisee</h3>
+      <div class="container">
+          <div class="jumbotron">
+              <div class="container">
+                  <button type="button" class="button">Employee Info</button>
+                  <button type="button" class="button"> KRA  </button>
+                  <button type="button" class="button"> KAA  </button>
+               </div>     
+          </div>  
+          </div>
+          </div>
+    <div id="appariser" class="tab-pane fade">
+      <h3>appariser</h3>
+      <div class="container">
+          <div class="jumbotron">
+              <div class="container">
+                  <button type="button" class="button"> KRA </button>
+                  <button type="button" class="button"> KAA  </button>
+                  <button type="button" class="button"> EP  </button>
+               </div>     
+          </div>  
+          </div>
+      </div>
+    <div id="hrmanagement" class="tab-pane fade">
+      <h3>HR-Management</h3>
+      </div>
+  </div>
+</div>
+
+-->
+<!--
+<div>
+   <h3>KRA based Evaluation </h3>
+<table>
+  <tr>
+    <th>Sr No./th>
+    <th>MPP/Bugzilla</th>
+    <th>KRA</th>
+    <th>Validation Cretria</th>
+    <th>Max Score</th>
+    <th>Self Appraisal</th>
+    <th>Apprasial</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td> </td>
+    <td>Training and Study</td>
+    <td>Training in C#<br>
+        Training in SQL<br>
+        Training in ERP FrameWork<br>
+        Training in ERP Spec<br>
+    </td>    
+    <td>10<br>
+      10<br>
+      10<br>
+      10<br>
+    </td>
+      <td><input type="number"> <br>
+        <input type="number"><br>
+        <input type="number"><br>
+        <input type="number"><br>
+      </td>    
+      <td><input type="number"> <br>
+        <input type="number"><br>
+        <input type="number"><br>
+        <input type="number"><br>
+      </td>
+        </tr>
+  <tr>
+    <td>2</td>
+    <td></td>
+    <td>ERP-HR Module Modification</td>
+    <td>Level and Extra Work adjustment As per new HR policy<br>
+        Hardship Allowance Report<br>
+        Customer Support<br>
+    </td>    
+    <td> </td>
+    <td></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>3</td>
+    <td> </td>
+    <td>ERP Account Modifications</td>
+    <td>Code Modification for po authorization changes<br>
+        Development of Receipt with advance Deduction<br>
+        Tax Compliance<br>
+    </td>    
+    <td> </td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Total</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td> <input type="number"></td>
+      <td> <input type="number"></td>
+
+  </tr>
+</table>
+<div>
+      <h3>Atrribute based Evaluation </h3>
+        <table>
+          <tr>
+            <th>Sr No.</th>
+            <th> </th>
+            <th>Attribute</th>
+            <th>Max Score</th>
+            <th>Self assessment</th>
+            <th>Appraiser assessment</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Ability to</td>
+            <td>Understand and Master New Concepts<br>
+                Quickly turn the things around<br>
+                Push through and finish work<br>
+                Stretch to complete work<br>
+                Understand, explain and document the work properly<br>
+            </td>    
+            <td> 2<br>
+              2<br>
+              2<br>
+              2<br>
+              2<br></td>
+              <td><input type="number" ><br>
+                <input type="number" ><br>
+                <input type="number" > <br>
+                <input type="number" ><br>
+              </td>    
+         
+              <td><input type="number" ><br>
+                <input type="number" ><br>
+                <input type="number" > <br>
+                <input type="number" ><br>
+              </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Ethics</td>
+             
+            <td> </td>
+            <td>4</td>
+            <td> </td>
+            <td> </td>
+          </tr>
+        
+          <tr>
+            <td>3</td>
+            <td>Team Work</td>
+              
+            <td> </td>
+            <td> 4</td>
+            <td> </td>
+            <td> </td> 
+          </tr>
+          <tr>
+              <td>4</td>
+              <td>Leadership</td>
+                
+              <td> </td>
+              <td> 4</td>
+              <td></td>
+              <td> </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Discipline</td>
+                  
+                <td> </td>
+                <td> 5</td>
+                <td></td>
+                <td> </td>
+              </tr>
+              <tr>
+                  <td>6</td>
+                  <td>Communication</td>
+                    
+                  <td> </td>
+                  <td> 5</td>
+                  <td></td>
+                  <td> </td>
+                </tr>
+          <tr>
+            <td>Total</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td><input type="number" > </td>
+            <td><input type="number" > </td>
+            
+          </tr>
+        </table>
+        
+        </div>
+    
+  
+</div>
+-->
+
+ 
+
+
+
+<!--commet
+<div class="container">
+    <form class="form-horizontal"></form>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="EmployeeName">EmployeeName:</label>
+      <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="Form.EmployeeName" placeholder="Enter FullName">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="EmployeeID">EmployeeID:</label>
+      <div class="col-sm-10">
+      <input type="number" class="form-control" [(ngModel)]="Form.EmployeeID" placeholder="Enter EmployeeID">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="Department">Department:</label>
+      <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="Form.Department">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="HOD">HOD:</label>
+      <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="Form.HOD">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="Designation">Designation:</label>
+      <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="Form.Designation">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="DOJ">DOJ:</label>
+      <div class="col-sm-10">
+      <input type="Date" class="form-control" [(ngModel)]="Form.DOJ">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="Qualifications">Qualifications:</label>
+      <div class="col-sm-10">
+      <input type="text" class="form-control" [(ngModel)]="Form.Qualifications">
+      </div>
+    </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="PreviousExperience">PreviousExperience:</label>
+    <div class="col-sm-10">
+    <input type="text" class="form-control" [(ngModel)]="Form.PreviousExperience">
+    </div>
+  </div> 
+  <button type="button" class="btn btn-default" (click)="submit()" [disabled]="!Form.EmployeeID">submit</button>
+</div>
+<table class="table table-bordered" *ngIf="Form.length == 0 ? false : true">
+  <thead>
+    <tr>
+      <th>EmployeeName</th>
+      <th>EmployeeID</th>
+      <th>Department</th>
+      <th>HOD</th>
+      <th>Designation</th>
+     <th>DOJ</th>
+      <th>Qualifications</th>
+      <th>PreviousExperience</th>
+    </tr>
+  </thead>
+<tbody>
+  
+  <tr *ngFor="let data of FormList">
+    <td>{{data.EmployeeName}}</td>
+    <td>{{data.EmployeeID}}</td>
+    <td>{{data.Department}}</td>
+    <td>{{data.HOD}}</td>
+    <td>{{data.Designation}}</td>
+    <td>{{data.DOJ}}</td>
+    <td>{{data.Qualifications}}</td>
+    <td>{{data.PreviousExperience}}</td>
+  </tr>
+</tbody>
+</table>
+-->
