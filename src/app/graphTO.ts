@@ -6,6 +6,8 @@ export class Projects{
     Dateofend?:Date
     Module?:modulelist[] = [];
     Description?:string
+    projectId?:number
+
  }
 
  export class modulelist

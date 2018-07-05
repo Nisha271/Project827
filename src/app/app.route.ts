@@ -15,7 +15,7 @@ export const routes: Routes = [
     { path: 'dashboard' , component: DashboardComponent },
     { path: 'appraisee' , component: AppraiseeComponent },
     { path: 'appraiser' , component: AppraiserComponent },
-    { path: 'graph' , component: GraphComponent }
+    { path: 'projects' , component: GraphComponent }
 
 ];
 
