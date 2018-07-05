@@ -1,25 +1,65 @@
-<nav class="navbar navbar-fixed-top navbar-inverse topbar">
-    <div class="container-fluid">
-        <a class="navbar-brand">SimplyWorks<sup>TM</sup></a>
-        <ul class="nav navbar-nav" routerLinkActive="active">
-            <li class="nav-item"><a class="nav-link" routerLink="home">Home</a></li>
-            <li class="nav-item"><a class="nav-link" routerLink="appraisee" (click)='s1()'>Registeration Form</a></li>
-            <li class="nav-item"><a class="nav-link" routerLink="appraiser">Assign Task</a></li>
-            <li class="nav-item"><a class="nav-link" routerLink="hrmanagement">HR-Management</a></li>
-            <li class="nav-item"><a class="nav-link" routerLink="graph">Graph</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-        </ul>
-      <ul class="nav navbar-nav navbar-right">
-         <li><a href="#"><span class="glyphicon"></span>Change Password</a></li>
-      </ul>
-    </div>
-  </nav>
-  
-
-
-
-
-
-<router-outlet></router-outlet>
+    <nav class="navbar navbar-fixed-top navbar-inverse topbar">
+        <div class="container-fluid">
+            <a class="navbar-brand">SimplyWorks<sup>TM</sup></a>
+            <ul class="nav navbar-nav" routerLinkActive="active">
+                <li class="nav-item"><a class="nav-link" routerLink="appraisee" (click)='s1()'>Registeration Form</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="appraiser">Assign Task</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="graph">Graph</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+            </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal" (change)="modalpop()">Change Password</button>
+          </ul>
+        </div>
+      </nav>
+      <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+        
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Change Password</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="container">
+                      <form class="form-group"></form>  
+                      <div class="form-group">
+                        <label class="control-label col-sm-1" onkeypress="changePasswd()" for="CurrentPasswd">Current Password:</label>
+                        <div class="col-sm-3">
+                        <input type="password" class="form-control" [(ngModel)]="Pass.CurrentPasswd" placeholder="Current password">
+                        </div>
+                      </div>
+                      <label class="control-label col-sm-12"></label>
+                      <div class="form-group">
+                          <label class="control-label col-sm-1" for="NewPasswd">New Password:</label>
+                          <div class="col-sm-3">
+                          <input type="password" class="form-control" [(ngModel)]="Pass.NewPasswd" placeholder="New password">
+                          </div>
+                        </div>
+                        <label class="control-label col-sm-12"></label>
+                        <div class="form-group">
+                            <label class="control-label col-sm-1" for="ConfirmPasswd">Confirm Password:</label>
+                            <div class="col-sm-3">
+                            <input type="password" class="form-control" [(ngModel)]="Pass.ConfirmPasswd" placeholder="Confirm password">
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" (click)="savePasswd()" data-dismiss="modal">Save</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+                </div>
+                </div>
+                
+    
+    
+    
+    
+    
+    <router-outlet></router-outlet>
+    

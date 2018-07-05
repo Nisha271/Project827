@@ -235,7 +235,6 @@
 </div>
 
 <div id="VIEW" class="tab-pane fade">
-        <button type="button" style="float: right;" class="btn btn-primary"  id='button2'(click)="AddInformation()">Add</button>         
       <table class="table table-bordered" >
               <thead>
                 <tr>
@@ -250,7 +249,9 @@
                   <td>{{d.FirstName}}</td>
                   <td>{{d.LastName}}</td>
                   <td>{{d.EmailId}}</td>
-                  <td><button type="button" class="btn btn-primary btn-sm">
+                  <td><button type="button"  class="btn btn-primary btn-sm">
+                      <span class="glyphicon glyphicon-plus" (click)="AddInformation()"></span></button>      
+                      <button type="button" class="btn btn-primary btn-sm">
                        <span class="glyphicon glyphicon-eye-open" (click)="ViewInformation(d)"></span></button>
                       <button type="button" class="btn btn-primary btn-sm">
                           <span class="glyphicon glyphicon-edit" (click)="edit(d,i);"></span></button>
