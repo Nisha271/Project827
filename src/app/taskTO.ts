@@ -8,4 +8,5 @@ export class task
     EndDate?:Date
     Priority?:number
     Status?:number
+    color?: string
 }

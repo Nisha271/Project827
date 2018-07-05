@@ -89,16 +89,22 @@
                   <tr>
                     <th>Project</th>
                     <th>User</th>
+                    <th>Start Date</th>
+                    <th>Due Date</th>
                     <th>Status</th>
                     <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let d of TaskList">
+                  <tr *ngFor="let d of TaskList;let j = index;"  >
                     <td>{{d.Project}}</td>
                     <td>{{d.User}}</td>
+                    <td>{{d.StartDate}}</td>
+                    <td>{{d.EndDate}}</td>
                     <td>{{d.Status}}</td>
-                    <td><button type="button" class="btn btn-primary btn-sm">
+                    <td><button type="button"  class="btn btn-primary btn-sm">
+                        <span class="glyphicon glyphicon-plus" (click)="AddInformation()"></span></button>
+                      <button type="button" class="btn btn-primary btn-sm">
                          <span class="glyphicon glyphicon-eye-open" (click)="ViewInformation(d)"></span></button>
                         <button type="button" class="btn btn-primary btn-sm">
                             <span class="glyphicon glyphicon-edit" (click)="edit(d);"></span></button>
