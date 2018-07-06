@@ -9,12 +9,8 @@ declare  var jQuery:any;
 
 export class DashboardComponent implements OnInit {
 
-  constructor(private Router:Router) {
-    jQuery ('.topbar').hide();
-  }
-  dash(){
-    this.Router.navigate(['app'])
-  }
+  constructor() {}
+   
   ngOnInit() {
   }
 
