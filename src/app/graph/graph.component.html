@@ -140,24 +140,22 @@
       </div>
       <div class="modal-body">
         <p> this is modal</p>
-        <table class="table table-bordered" >
+        <table class="table table-bordered">
 
           <thead>
-            <tr>
-              <!--  <th>Modules-Id</th> -->
-              <th>#</th>
+            <tr >
+            
               <th>ModuleName</th>
               
           </thead>
           <tbody>
-            <tr *ngFor="let a of ModuleList; let i=index" (click)="attachModule(i)">
-              <!--   <td>{{d.projectId}}</td> -->
-              <td>{{i}}</td>
+             <tr *ngFor="let a of ModuleList">
               <td>{{a.ModuleName}}</td>
-
             </tr>
+          
           </tbody>
         </table>
+        
       
        
             <!-- {{ModuleList.ModuleName}} -->
