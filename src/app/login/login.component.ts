@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
     PassList:pass [] = [];
   ngOnInit() {
   }
+ 
   submit(){
   
     console.log(this.FormTo)

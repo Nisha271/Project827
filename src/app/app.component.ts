@@ -23,27 +23,45 @@ export class AppComponent{
     //  this.d1 = {}; 
   }
   changePasswd(){
-    if(this.Pass.CurrentPasswd === this.FormTo.Password){
-      
+    debugger
+    this.FormTo.Password = '276';
+    if(this.Pass.CurrentPasswd !== this.FormTo.Password){
+      document.getElementById('cp').innerHTML="Password mismatch!";
+    }
+     else{
       if(this.Pass.NewPasswd !== this.FormTo.Password){
         this.FormTo.Password = this.Pass.NewPasswd;
+       }
+       else{
+        document.getElementById('np').innerHTML="Current Password and New Password should not be same";
+       }
+       if(this.Pass.NewPasswd === this.Pass.ConfirmPasswd){
+        this.FormTo.Password = this.Pass.ConfirmPasswd; 
       }
       else{
-        alert("Password is same as previous");
+        document.getElementById('confp').innerHTML="fail"; 
       }
-      if(this.Pass.NewPasswd === this.Pass.ConfirmPasswd){
-        this.FormTo.Password = this.Pass.ConfirmPasswd;
-      }
-      else{
-        alert("fail");
-      }
+      this.FormTo.Password = this.Pass.NewPasswd;
+     } 
+  }
+  clear(){
+    this.Pass.CurrentPasswd = null;
+    this.Pass.NewPasswd = null;
+    this.Pass.ConfirmPasswd = null;
+    document.getElementById('cp').innerHTML = null;
+    document.getElementById('np').innerHTML = null;
+    document.getElementById('confp').innerHTML = null;
+  }
+  validatepasswd() {
+    if (this.Pass.CurrentPasswd != 'null' && this.Pass.NewPasswd != 'null' && this.Pass.ConfirmPasswd != null) {
+      return false;
     }
-    else{
-      alert("Current password not match!");
+    else {
+      return true;
     }
   }
   savePasswd(){
-    this.FormTo.Password = this.Pass.NewPasswd;
+    
   }
 }
 

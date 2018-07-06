@@ -31,14 +31,14 @@ export class AppraiserComponent implements OnInit {
     jQuery("#button1").html('OK');
     this.TaskList = [];
   }
-  SubmitInformation(c){
-    
+  SubmitInformation(){
+    let color: string = "blue";
+    color = 'red';
     this.TaskList.push(this.Task);
     jQuery("#v1").tab('show');
-    // if(c.value === 1){
-    //   c.style.color = 'white';
-    //   c.style.background = 'red';
-    // }
+    if(this.Task.Priority == 2){
+      return this.Task.color;
+    }
     this.Task = {};
     this.abc = false;  
   }

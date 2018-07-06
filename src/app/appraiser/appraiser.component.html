@@ -47,7 +47,7 @@
                           <div class="col-sm-5">      
                               <select class="form-control" id="Priority" [disabled]="abc" [(ngModel)]="Task.Priority">
                                   <option></option>      
-                                <option *ngFor="let p1 of priority">{{p1}} </option>     
+                                <option *ngFor="let p1 of priority,let j = index" value="{{j}}">{{p1}} </option>     
                                     </select>
                       </div>  
                         </div>
@@ -96,7 +96,11 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let d of TaskList;"   >
+                  <tr *ngFor="let d of TaskList;" [ngClass]='d.Priority == 0 ? "danger" : "info"'  >
+                    <div [ngSwitch]="d.Priority">
+                      <div *ngSwitchCase='"0"'></div>
+                    </div>
+                      {{d.Priority | json}}
                     <td>{{d.Project}}</td>
                     <td>{{d.User}}</td>
                     <td>{{d.StartDate}}</td>
