@@ -131,7 +131,7 @@
 
   </div>
 </div>
-<div class="modal fade" id="v" role="dialog">
+<div class="modal fade" id="v" role="dialog" >
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -140,7 +140,7 @@
       </div>
       <div class="modal-body">
         <p> this is modal</p>
-        <table class="table table-bordered" (click)="attachModule(i)">
+        <table class="table table-bordered" >
 
           <thead>
             <tr>
@@ -150,7 +150,7 @@
               
           </thead>
           <tbody>
-            <tr *ngFor="let a of ModuleList; let i=index">
+            <tr *ngFor="let a of ModuleList; let i=index" (click)="attachModule(i)">
               <!--   <td>{{d.projectId}}</td> -->
               <td>{{i}}</td>
               <td>{{a.ModuleName}}</td>
