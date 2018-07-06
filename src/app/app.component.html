@@ -2,7 +2,7 @@
         <div class="container-fluid">
             <a class="navbar-brand">SimplyWorks<sup>TM</sup></a>
             <ul class="nav navbar-nav" routerLinkActive="active">
-              
+                <li class="nav-item"><a class="nav-link" routerLink="home">Home</a></li>
                 <li class="nav-item"><a class="nav-link" routerLink="appraisee" (click)='s1()'>Registeration Form</a></li>
                 <li class="nav-item"><a class="nav-link" routerLink="appraiser">Assign Task</a></li>
                 <li class="nav-item"><a class="nav-link" routerLink="projects">Projects</a></li>
@@ -24,26 +24,27 @@
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Change Password</h4>
+              
               </div>
               <div class="modal-body">
                   <div class="container">
                       <form class="form-group"></form>  
                       <div class="form-group">
-                        <label class="control-label col-sm-1" onkeypress="changePasswd()" for="CurrentPasswd">Current Password:</label>
+                        <label class="control-label col-sm-1"  for="CurrentPasswd">Current Password:</label>
                         <div class="col-sm-3">
-                        <input type="password" class="form-control" [(ngModel)]="Pass.CurrentPasswd" placeholder="Current password">
+                        <input type="password" class="form-control" [(ngModel)]="Pass.CurrentPasswd"  placeholder="Current password"><div id='cp'></div>
                         </div>
                       </div>
                       <label class="control-label col-sm-12"></label>
                       <div class="form-group">
-                          <label class="control-label col-sm-1" for="NewPasswd">New Password:</label>
+                          <label class="control-label col-sm-1" for="NewPasswd">New Password:</label><div id='np'></div>
                           <div class="col-sm-3">
                           <input type="password" class="form-control" [(ngModel)]="Pass.NewPasswd" placeholder="New password">
                           </div>
                         </div>
                         <label class="control-label col-sm-12"></label>
                         <div class="form-group">
-                            <label class="control-label col-sm-1" for="ConfirmPasswd">Confirm Password:</label>
+                            <label class="control-label col-sm-1" for="ConfirmPasswd">Confirm Password:</label><div id='confp'></div>
                             <div class="col-sm-3">
                             <input type="password" class="form-control" [(ngModel)]="Pass.ConfirmPasswd" placeholder="Confirm password">
                             </div>
@@ -51,8 +52,8 @@
                     </div>
                   </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" (click)="savePasswd()" data-dismiss="modal">Save</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" [disabled]='validatepasswd()' (click)='changePasswd()' >Save</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal"(click)='clear()'>Close</button>
                   </div>
                 </div>
                 </div>
