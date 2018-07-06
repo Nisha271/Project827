@@ -15,9 +15,11 @@ export class GraphComponent implements OnInit {
   p: Projects = {};
   Module: modulelist = {};
   ModuleList: modulelist[] = [];
+ 
   pList: Projects[] = [];
   abc: boolean = false;
   l: any[] = [];
+  m:any [] = [];
 
   ngOnInit() {
   }
@@ -58,7 +60,6 @@ export class GraphComponent implements OnInit {
 
   sub2() {
     debugger
-   
     this.ModuleList = [];
     this.Module.projectId = this.projectId;
     let c = this.pList[this.projectId].Module;
@@ -66,12 +67,18 @@ export class GraphComponent implements OnInit {
       c.push(this.Module);
     }
     else {
-      let c = this.pList[this.projectId];
+     let c = this.pList[this.projectId];
       this.ModuleList.push(this.Module);
-      c.Module = this.ModuleList
-      //jQuery.extend({},list);
-      
+      c.Module = this.ModuleList;
+     // this.l = this.ModuleList;
+    //  this.l =  this.pList[ this.Module.projectId].Module;
+        
+              
+       
+   //   this.l = this.ModuleList;      //jQuery.extend({},list);
+    
     }
+    
 
 
     //c.Module = this.ModuleList;
@@ -90,12 +97,21 @@ export class GraphComponent implements OnInit {
     //this.p={};
     //jQuery("#v1").tab("show");
 
-
   }
-sub()
+ 
+  
+b1(id)
 {
-  
-  
+ //
+  this.l=  this.pList[id].Module;
+ // c.Module = [];
+ console.log(this.l)
+}
+b2(id)
+{
+  let c = this.pList[this.projectId];
+ c.Module = [] ;
+
 }
 
 }

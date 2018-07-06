@@ -82,9 +82,12 @@
           <td>{{d.Dateofstart}}</td>
           <td>{{d.Dateofend}}</td>
           <td>{{d.Module | json}}
-            <button type="button" class="glyphicon glyphicon-eye-open" data-toggle="modal" data-target="#v">
+            <button type="button" class="glyphicon glyphicon-eye-open" data-toggle="modal" data-target="#v" (click)="b1(i)">
               <span class="glyphicon"></span>
             </button>
+            <button type="button" class="btn btn-default" (click)="b2(i)">
+                <span class="glyphicon"></span>
+              </button>
           </td>
           <td>
             <button type="button" class="btn btn-primary btn-sm" (click)="view(d)">
@@ -121,10 +124,10 @@
             <input type="text" class="form-control" [(ngModel)]="Module.ModuleName">
           </div>
         </div>
-
       </div>
       <div class="modal-footer">
         <button id="b2" type="button" class="btn btn-default" (click)="sub2(d)">Submit</button>
+      
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
@@ -140,38 +143,25 @@
       </div>
       <div class="modal-body">
         <p> this is modal</p>
-        <table class="table table-bordered">
-
+        <table class="table table-bordered" id="t">
           <thead>
-            <tr> <th>ModuleName</th></tr>
-
-              
+            <tr><th>ModuleName</th></tr>
           </thead>
           <tbody>
-             <tr *ngFor="let a of ModuleList">
+             <tr *ngFor="let a of l; let i=index">
               <td>{{a.ModuleName}}</td>
             </tr>
           
           </tbody>
         </table>
-        
-      
-       
             <!-- {{ModuleList.ModuleName}} -->
             <!-- <ng-container *ngFor="let m of ModuleList; let i=index"> {{m.ModuleName}} </ng-container> -->
-             
-               
         <!-- {{Module.projectId}} -->
         <!-- <ul class="moduleList"  *ngfor="#m of ModuleList"> {{ m.ModuleName}} </ul> -->
-
-
         <!-- <div *ngfor="let m of ModuleList"> {{m.ModuleName}}</div> -->
-
-
       </div>
       <div class="modal-footer">
-
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
 
