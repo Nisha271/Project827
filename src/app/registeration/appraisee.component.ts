@@ -28,12 +28,15 @@ export class AppraiseeComponent implements OnInit {
   }
   AddInformation() {
     jQuery("#a1").tab('show');
+    jQuery("#button1").html('Add');
+
   }
   ViewInformation(data) {
     jQuery("#a1").tab('show');
     this.Register = data;
     this.abc = true;
     jQuery("#button1").html('OK');
+    this.RegisterList = [];
   }
   SubmitInformation() {
     this.RegisterList.push(this.Register);

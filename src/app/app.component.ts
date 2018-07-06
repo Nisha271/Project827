@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { pass } from './appTO';
 import { form } from './formTO';
+import { register, id } from './registerTO';
+
 
 @Component({
   selector: 'app-root',
@@ -14,6 +16,12 @@ export class AppComponent{
   Pass:pass = {};
   PassList:pass [] = [];
   FormTo:form ={};
+  Register: register = {};
+  RegisterList: register[] = [];
+  s1() {
+    this.RegisterList.push(this.Register);
+    //  this.d1 = {}; 
+  }
   changePasswd(){
     if(this.Pass.CurrentPasswd === this.FormTo.Password){
       
