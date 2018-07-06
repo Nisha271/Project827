@@ -43,7 +43,7 @@
                               </div>  
                       </div>
                       <div class="form-group">
-                          <label class="control-label col-sm-1" for="Priority">Priority:</label>
+                          <label class="control-label col-sm-1" id='color' for="Priority">Priority:</label>
                           <div class="col-sm-5">      
                               <select class="form-control" id="Priority" [disabled]="abc" [(ngModel)]="Task.Priority">
                                   <option></option>      
@@ -96,7 +96,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let d of TaskList;let j = index;"  >
+                  <tr *ngFor="let d of TaskList;"   >
                     <td>{{d.Project}}</td>
                     <td>{{d.User}}</td>
                     <td>{{d.StartDate}}</td>

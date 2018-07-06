@@ -22,21 +22,23 @@ export class AppraiserComponent implements OnInit {
   
   AddInformation() {
     jQuery("#a1").tab('show');
+    jQuery("#button1").html('Add');
   }
   ViewInformation(data){
     jQuery("#a1").tab('show');
     this.Task = data;
     this.abc = true;
     jQuery("#button1").html('OK');
+    this.TaskList = [];
   }
-  SubmitInformation(){
-    let color: string = "blue";
-    color = 'red';
+  SubmitInformation(c){
+    
     this.TaskList.push(this.Task);
     jQuery("#v1").tab('show');
-    if(this.Task.Priority == 2){
-      return this.Task.color;
-    }
+    // if(c.value === 1){
+    //   c.style.color = 'white';
+    //   c.style.background = 'red';
+    // }
     this.Task = {};
     this.abc = false;  
   }

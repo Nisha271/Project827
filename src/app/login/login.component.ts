@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {form} from '../formTO';
+import { pass } from '../appTO';
+
 declare var jQuery:any;
 @Component({
   selector: 'app-login',
@@ -13,6 +15,8 @@ export class LoginComponent implements OnInit {
     jQuery ('.topbar').hide();
    }
     FormTo:form = {};
+    Pass:pass = {};
+    PassList:pass [] = [];
   ngOnInit() {
   }
   submit(){

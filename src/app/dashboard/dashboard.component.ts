@@ -9,8 +9,10 @@ declare  var jQuery:any;
 
 export class DashboardComponent implements OnInit {
 
-  constructor() {}
-   
+  constructor(private Router:Router) {
+    jQuery ('.topbar').show();
+  }
+ 
   ngOnInit() {
   }
 
