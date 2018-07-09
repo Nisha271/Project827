@@ -1,38 +1,20 @@
 
-<nav class="navbar navbar-fixed-top navbar-inverse topbar">
-    <div class="container-fluid">
-        <a class="navbar-brand">SimplyWorks<sup>TM</sup></a>
-        <ul class="nav navbar-nav" routerLinkActive="active">
-            <li class="nav-item"><a class="nav-link" routerLink="home">Home</a></li>
-            <li class="nav-item"><a class="nav-link" routerLink="appraisee" (click)='s1()'>Registeration Form</a></li>
-            <li class="nav-item"><a class="nav-link" routerLink="appraiser">Assign Task</a></li>
-            <li class="nav-item"><a class="nav-link" routerLink="hrmanagement">HR-Management</a></li>
-            <li class="nav-item"><a class="nav-link" routerLink="projects">Projects</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-        </ul>
-      <ul class="nav navbar-nav navbar-right">
-         <li><a href="#"><span class="glyphicon"></span>Change Password</a></li>
-      </ul>
-    </div>
-  </nav>
-   
-<!-- 
-    <nav class="navbar navbar-fixed-top navbar-inverse topbar">
-        <div class="container-fluid">
-            <a class="navbar-brand">SimplyWorks<sup>TM</sup></a>
-            <ul class="nav navbar-nav" routerLinkActive="active">
-                <li class="nav-item"><a class="nav-link" routerLink="home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" routerLink="appraisee" (click)='s1()'>Registeration Form</a></li>
-                <li class="nav-item"><a class="nav-link" routerLink="appraiser">Assign Task</a></li>
-                <li class="nav-item"><a class="nav-link" routerLink="projects">Projects</a></li>
-                
-            </ul>
+  <nav class="navbar navbar-fixed-top navbar-inverse topbar">
+      <div class="container-fluid">
+          <a class="navbar-brand">PMS<sup>TM</sup></a>
+          <ul class="nav navbar-nav" routerLinkActive="active">
+              <li class="nav-item"><a class="nav-link" routerLink="home">Home</a></li>
+              <li class="nav-item"><a class="nav-link" routerLink="appraisee" (click)='s1()'>Employee Details</a></li>
+              <li class="nav-item"><a class="nav-link" routerLink="projects">Projects</a></li>
+              <li class="nav-item"><a class="nav-link" routerLink="appraiser">Assign Task</a></li>
+              <li class="nav-item"><a class="nav-link" routerLink="hrmanagement">Report</a></li>
+              
+          </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
             </ul>
           <ul class="nav navbar-nav navbar-right">
+              <label class="control-label col-sm-12"></label>
             <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal" (change)="modalpop()">Change Password</button>
           </ul>
         </div>
@@ -84,6 +66,6 @@
     
     
     
-     -->
+    
     <router-outlet></router-outlet>
     
