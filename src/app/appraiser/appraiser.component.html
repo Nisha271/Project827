@@ -97,9 +97,7 @@
                 </thead>
                 <tbody>
                   <tr *ngFor="let d of TaskList;" [ngClass]='d.Priority == 0 ? "danger" : "info"'  >
-                    <div [ngSwitch]="d.Priority">
-                      <div *ngSwitchCase='"0"'></div>
-                    </div>
+                   
                       {{d.Priority | json}}
                     <td>{{d.Project}}</td>
                     <td>{{d.User}}</td>

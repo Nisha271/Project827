@@ -17,7 +17,7 @@ export class AppraiserComponent implements OnInit {
   project = ['CRM','Sales'];
   module = ['Dashboard','Enquiry','Visits'];
   user = ['Nisha Bukke','Archana Botla','Bhagyashree Dalvi','Shruti Bidwai'];
-  priority = ['High','Medium','Low'];
+  priority = ['High','Low'];
   status = ['New','In progress','Completed'];
   
   AddInformation() {
