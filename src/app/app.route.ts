@@ -20,7 +20,8 @@ export const routes: Routes = [
     { path: 'projects' , component: GraphComponent },
     { path: 'appraiser' , component: AppraiserComponent },
     { path: 'report' , component: ReportComponent }
-  
+,
 
+    { path: 'projects' , component: GraphComponent }
 ];
 
