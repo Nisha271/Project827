@@ -60,9 +60,7 @@ export class AppComponent{
       return true;
     }
   }
-  savePasswd(){
-    
-  }
+ 
 }
 
 
