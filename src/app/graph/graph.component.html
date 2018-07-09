@@ -31,8 +31,13 @@
         </div>
         <div class="form-group">
           <label class="control-label col-sm-2" for="Status">Status:</label>
-          <div class="col-sm-4">
-            <input type="text" class="form-control" [(ngModel)]="p.Status" [disabled]="abc" placeholder="Enter Status">
+          <div class="col-sm-4">          
+            <select class="form-control" id="select1" [(ngModel)]="p.Status" [disabled]="abc" placeholder="enter Status">
+                <option>New</option>
+                <option>InProgress</option>
+                <option>Completed</option>
+              </select>
+         
           </div>
         </div>
         <label class="control-label col-sm-12"></label>
