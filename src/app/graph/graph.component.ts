@@ -104,14 +104,17 @@ b1(id)
 {
  //
   this.l=  this.pList[id].Module;
- // c.Module = [];
+  //  let c = this.pList[this.projectId];
+  //  c.Module = [];
+
  console.log(this.l)
 }
-b2(id)
-{
-  let c = this.pList[this.projectId];
+ b2(id)
+ {
+  this.l=  this.pList[id].Module;
+   let c = this.pList[this.projectId];
  c.Module = [] ;
 
-}
+ }
 
 }

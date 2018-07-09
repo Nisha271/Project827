@@ -82,15 +82,15 @@
           <td>{{d.Dateofstart}}</td>
           <td>{{d.Dateofend}}</td>
           <td>{{d.Module | json}}
-            <button type="button" class="glyphicon glyphicon-eye-open" data-toggle="modal" data-target="#v" (click)="b1(i)">
-              <span class="glyphicon"></span>
+            <button type="button" class=" btn btn-primary btn-sm" data-toggle="modal" data-target="#v" (click)="b1(i)">
+              <span class="glyphicon glyphicon-eye-open"></span>
             </button>
-            <button type="button" class="btn btn-default" (click)="b2(i)">
-                <span class="glyphicon"></span>
+            <button type="button" class="btn btn-primary btn-sm" (click)="b2(i)">
+                <span class="glyphicon glyphicon-remove"></span>
               </button>
           </td>
           <td>
-            <button type="button" class="btn btn-primary btn-sm" (click)="view(d)">
+            <button type="button" class="glyphicon glyphicon-eye-open btn btn-primary btn-sm" (click)="view(d)">
               <span></span>
             </button>
             <button type="button" (click)="attachModule(i)" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#am">
