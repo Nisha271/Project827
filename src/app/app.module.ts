@@ -13,6 +13,7 @@ import { AppraiseeComponent } from './registeration/appraisee.component';
 import { AppraiserComponent } from './appraiser/appraiser.component';
 import { HomeComponent } from './home/home.component';
 import { GraphComponent} from './graph/graph.component';
+import { ReportComponent } from './report/report.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { GraphComponent} from './graph/graph.component';
     AppraiseeComponent,
     AppraiserComponent,
     HomeComponent,
-    GraphComponent
+    GraphComponent,
+    ReportComponent
   ],
   imports: [
     BrowserModule,

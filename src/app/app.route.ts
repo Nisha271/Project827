@@ -8,6 +8,7 @@ import { AppraiseeComponent } from './registeration/appraisee.component';
 import { AppraiserComponent } from './appraiser/appraiser.component';
 import { GraphComponent } from './graph/graph.component';
 import { HomeComponent } from './home/home.component';
+import { ReportComponent } from './report/report.component';
 
 
 export const routes: Routes = [
@@ -16,8 +17,10 @@ export const routes: Routes = [
     { path: 'dashboard' , component: DashboardComponent },
     { path: 'home' , component: HomeComponent },
     { path: 'appraisee' , component: AppraiseeComponent },
+    { path: 'projects' , component: GraphComponent },
     { path: 'appraiser' , component: AppraiserComponent },
-    { path: 'projects' , component: GraphComponent }
+    { path: 'report' , component: ReportComponent }
+  
 
 ];
 
