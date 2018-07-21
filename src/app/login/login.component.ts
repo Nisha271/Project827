@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   }
  
   submit(){
-  
+    debugger;
     console.log(this.FormTo)
     if(this.FormTo.Email == 'nisha' && this.FormTo.Password == '276')
     {

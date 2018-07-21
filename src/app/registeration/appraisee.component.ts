@@ -39,8 +39,9 @@ export class AppraiseeComponent implements OnInit {
     this.RegisterList = [];
   }
   SubmitInformation() {
-    this.RegisterList.push(this.Register);
+    debugger;
     jQuery("#v1").tab('show');
+    this.RegisterList.push(this.Register);
     this.Register = {};
     this.abc = false;
     this.isUpdate = false;
